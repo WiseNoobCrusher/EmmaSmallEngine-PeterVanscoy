@@ -1,0 +1,46 @@
+/* Universal */
+
+.Font {
+    font-family: "Comic Sans MS";
+}
+
+.Banner {
+    text-align: center;
+    font-size: 70pt;
+}
+
+/* Navigation */
+
+.Nav {
+    margin: 25px;
+    border-radius: 25px;
+    display: block;
+    background-color: #009900;
+    text-align: center;
+    font-size: 25pt;
+    font-weight: 700;
+}
+
+.NavItems {
+    text-decoration: none;
+    margin-right: 120px;
+}
+
+/* Login */
+
+.PageFontSize {
+    font-size: xx-large;
+}
+
+.TextBoxLabels {
+    width: 120px;
+}
+
+.LoginForm {
+    width: 19%;
+    font-size: x-large;
+    margin: 0 auto;
+}
+
+/* Home */
+
