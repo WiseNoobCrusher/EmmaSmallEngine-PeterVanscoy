@@ -8,7 +8,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 
-namespace FinalAssignment
+namespace EmmaSmallEngine
 {
     public partial class Registration : System.Web.UI.Page
     {
@@ -29,11 +29,20 @@ namespace FinalAssignment
                 var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
                 var userIdentity = manager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
                 authenticationManager.SignIn(userIdentity);
-                Response.Redirect("~/Welcome.aspx");
+                Response.Redirect("~/Home.aspx");
             }
             else
                 lblMessage.Text = idResult.Errors.FirstOrDefault();
 
+        }
+
+        protected void btnBack_Click(object sender, EventArgs e)
+        {
+            this.txtConfirm.Text = "";
+            this.txtPass.Text = "";
+            this.txtUser.Text = "";
+
+            Response.Redirect("~/Login.aspx");
         }
     }
 }

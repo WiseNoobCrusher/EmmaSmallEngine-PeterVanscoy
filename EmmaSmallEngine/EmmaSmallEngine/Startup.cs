@@ -5,9 +5,9 @@ using Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.AspNet.Identity;
 
-[assembly: OwinStartup(typeof(FinalAssignment.Startup))]
+[assembly: OwinStartup(typeof(EmmaSmallEngine.Startup))]
 
-namespace FinalAssignment
+namespace EmmaSmallEngine
 {
     public class Startup
     {

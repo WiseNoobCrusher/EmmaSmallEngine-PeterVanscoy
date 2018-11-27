@@ -8,7 +8,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
 
-namespace FinalAssignment
+namespace EmmaSmallEngine
 {
     public partial class Home : System.Web.UI.Page
     {

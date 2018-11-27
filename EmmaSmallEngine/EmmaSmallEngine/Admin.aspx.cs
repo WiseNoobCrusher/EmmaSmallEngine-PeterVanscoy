@@ -8,7 +8,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
 
-namespace FinalAssignment
+namespace EmmaSmallEngine
 {
     public partial class Admin : System.Web.UI.Page
     {

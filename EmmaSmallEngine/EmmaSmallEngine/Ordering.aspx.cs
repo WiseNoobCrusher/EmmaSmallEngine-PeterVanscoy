@@ -8,7 +8,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
 
-namespace FinalAssignment
+namespace EmmaSmallEngine
 {
     public partial class Ordering : System.Web.UI.Page
     {

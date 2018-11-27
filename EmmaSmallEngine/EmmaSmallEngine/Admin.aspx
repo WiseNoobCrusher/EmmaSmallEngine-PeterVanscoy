@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin.aspx.cs" Inherits="FinalAssignment.Admin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin.aspx.cs" Inherits="EmmaSmallEngine.Admin" %>
 
 <!DOCTYPE html>
 
@@ -10,8 +10,8 @@
     <body class="Font">
         <form id="admin" runat="server">
             <div class="Banner">
-                <asp:Image ID="logo" runat="server" ImageUrl="~/img/logo.png" Width="225px" style="text-align: left" /><br />
-                <span>Emma&#39;s Small Engine</span><br />
+                <asp:Image ID="logo" runat="server" ImageUrl="~/img/logo.png" Width="185px" style="text-align: left" />
+                <h1><strong>Emma&#39;s Small Engine</strong></h1>
             </div>
             <div class="Nav">
                 <br />

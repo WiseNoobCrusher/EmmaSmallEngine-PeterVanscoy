@@ -8,7 +8,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 
-namespace FinalAssignment
+namespace EmmaSmallEngine
 {
     public partial class Login : System.Web.UI.Page
     {

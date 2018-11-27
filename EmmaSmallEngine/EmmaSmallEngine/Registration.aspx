@@ -1,26 +1,20 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Registration.aspx.cs" Inherits="FinalAssignment.Registration" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Registration.aspx.cs" Inherits="EmmaSmallEngine.Registration" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            text-align: right;
-            width: 156px;
-        }
-        .auto-style2 {
-            font-size: xx-large;
-        }
-    </style>
+    <title>Emma's Small Engine - Register</title>
+    <link rel="stylesheet" href="~/css/styles.css" />
 </head>
-<body>
-    <form id="form1" runat="server">
-    <div style="height: 310px">
-    
-        <strong><span class="auto-style2">Register New User</span></strong><br />
-        <table style="width: 42%;">
+<body class="Font">
+    <form id="login" runat="server">
+        <div class="Banner">
+            <asp:Image ID="logo" runat="server" ImageUrl="~/img/logo.png" Width="185px" style="text-align: left" />
+                <h1><strong>Emma&#39;s Small Engine</strong></h1>
+        </div>
+        <strong><p class="PageFontSize">Register New User:</p></strong>
+        <table class="RegisterForm">
             <tr>
                 <td class="auto-style1">Username:</td>
                 <td>
@@ -41,21 +35,22 @@
             </tr>
         </table>
         <br />
-        <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" />
-        <br />
-        <br />
-        <asp:Label ID="lblMessage" runat="server"></asp:Label>
-        <br />
-        <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtPass" ControlToValidate="txtConfirm" ErrorMessage="Password does not match" SetFocusOnError="True"></asp:CompareValidator>
-        <br />
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUser" ErrorMessage="Username is required" SetFocusOnError="True"></asp:RequiredFieldValidator>
-        <br />
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPass" ErrorMessage="Password is required" SetFocusOnError="True"></asp:RequiredFieldValidator>
-        <br />
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtConfirm" ErrorMessage="Must confirm password" SetFocusOnError="True"></asp:RequiredFieldValidator>
-        <br />
-    
-    </div>
+        <div class="RegisterButtonsDiv">
+            <asp:Button class="ConfirmRegButton" ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" />
+            <asp:Button class="BackButton" ID="btnBack" runat="server" CausesValidation="False" Text="Back" OnClick="btnBack_Click" />
+        </div>
+        <p class="Messages">
+            <asp:Label ID="lblMessage" runat="server"></asp:Label>
+            <br />
+            <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtPass" ControlToValidate="txtConfirm" ErrorMessage="Password does not match" SetFocusOnError="True"></asp:CompareValidator>
+            <br />
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUser" ErrorMessage="Username is required" SetFocusOnError="True"></asp:RequiredFieldValidator>
+            <br />
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPass" ErrorMessage="Password is required" SetFocusOnError="True"></asp:RequiredFieldValidator>
+            <br />
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtConfirm" ErrorMessage="Must confirm password" SetFocusOnError="True"></asp:RequiredFieldValidator>
+            <br />
+        </p>
     </form>
 </body>
 </html>

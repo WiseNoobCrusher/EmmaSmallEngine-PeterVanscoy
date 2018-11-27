@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Sales.aspx.cs" Inherits="FinalAssignment.Sales" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Sales.aspx.cs" Inherits="EmmaSmallEngine.Sales" %>
 
 <!DOCTYPE html>
 
@@ -10,8 +10,8 @@
     <body class="Font">
         <form id="sales" runat="server">
             <div class="Banner">
-                <asp:Image ID="logo" runat="server" ImageUrl="~/img/logo.png" Width="225px" style="text-align: left" /><br />
-                <span>Emma&#39;s Small Engine</span><br />
+                <asp:Image ID="logo" runat="server" ImageUrl="~/img/logo.png" Width="185px" style="text-align: left" />
+                <h1><strong>Emma&#39;s Small Engine</strong></h1>
             </div>
             <div class="Nav">
                 <br />
@@ -22,6 +22,18 @@
                 <a class="NavItems" href="Admin.aspx"style="margin-right: 0px">Admin</a>
                 <br /><br />
             </div>
+
+            <div style="text-align: center">
+                <label class="LabelCustomer">Select a Customer:</label><br />
+                <asp:DropDownList runat="server" class="CustomerDDL">
+                    <asp:ListItem>Pick one...</asp:ListItem>
+                </asp:DropDownList>
+                <br />
+                <br />
+                <asp:Button ID="custSubmit" class="CustButton" runat="server" Text="Submit" />
+                <br />
+            </div>
+
         </form>
     </body>
 </html>

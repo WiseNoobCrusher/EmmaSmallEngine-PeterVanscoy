@@ -7,19 +7,28 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FinalAssignment {
+namespace EmmaSmallEngine {
     
     
     public partial class Registration {
         
         /// <summary>
-        /// form1 control.
+        /// login control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm login;
+        
+        /// <summary>
+        /// logo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image logo;
         
         /// <summary>
         /// txtUser control.
@@ -56,6 +65,15 @@ namespace FinalAssignment {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnRegister;
+        
+        /// <summary>
+        /// btnBack control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnBack;
         
         /// <summary>
         /// lblMessage control.

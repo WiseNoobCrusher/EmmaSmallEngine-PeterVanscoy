@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FinalAssignment {
+namespace EmmaSmallEngine {
     
     
     public partial class Login {
