@@ -95,7 +95,27 @@
 
 /* Home */
 
+.Random {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+}
 
+.ButtonBlock {
+    text-align: center;
+    display: block;
+}
+
+.ButtonDiv {
+    display: inline-block;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    width: 33%;
+}
+
+.ButtonCovers {
+    width: 40%;
+}
 
 /* Sales */
 
@@ -150,3 +170,26 @@
 }
 
 /* Admin */
+
+.AdminButtonBlock {
+    display: block;
+    text-align: center;
+}
+
+.AdminRadioButtons {
+    display: inline-block;
+    text-align: center;
+    margin: 60px 60px 60px 60px;
+}
+
+.GenerateButton {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#btnGenerate {
+    width: 130px;
+    height: 60px;
+    font-size: medium;
+    font-weight: 700;
+}

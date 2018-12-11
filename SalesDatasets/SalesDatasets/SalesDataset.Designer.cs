@@ -739,13 +739,13 @@ namespace SalesDatasets {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class ordersDataTable : global::System.Data.TypedTableBase<ordersRow> {
             
-            private global::System.Data.DataColumn columnid;
+            private global::System.Data.DataColumn columnordNumber;
             
-            private global::System.Data.DataColumn columnOrder_Number;
+            private global::System.Data.DataColumn columnprodName;
             
-            private global::System.Data.DataColumn columnOrder_Date;
+            private global::System.Data.DataColumn columnorlPrice;
             
-            private global::System.Data.DataColumn columnPrice;
+            private global::System.Data.DataColumn columnordDate;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -782,33 +782,33 @@ namespace SalesDatasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn idColumn {
+            public global::System.Data.DataColumn ordNumberColumn {
                 get {
-                    return this.columnid;
+                    return this.columnordNumber;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Order_NumberColumn {
+            public global::System.Data.DataColumn prodNameColumn {
                 get {
-                    return this.columnOrder_Number;
+                    return this.columnprodName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Order_DateColumn {
+            public global::System.Data.DataColumn orlPriceColumn {
                 get {
-                    return this.columnOrder_Date;
+                    return this.columnorlPrice;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn PriceColumn {
+            public global::System.Data.DataColumn ordDateColumn {
                 get {
-                    return this.columnPrice;
+                    return this.columnordDate;
                 }
             }
             
@@ -849,23 +849,16 @@ namespace SalesDatasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ordersRow AddordersRow(string Order_Number, System.DateTime Order_Date, decimal Price) {
+            public ordersRow AddordersRow(string ordNumber, string prodName, decimal orlPrice, System.DateTime ordDate) {
                 ordersRow rowordersRow = ((ordersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
-                        Order_Number,
-                        Order_Date,
-                        Price};
+                        ordNumber,
+                        prodName,
+                        orlPrice,
+                        ordDate};
                 rowordersRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowordersRow);
                 return rowordersRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ordersRow FindByid(int id) {
-                return ((ordersRow)(this.Rows.Find(new object[] {
-                            id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -885,32 +878,25 @@ namespace SalesDatasets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnid = base.Columns["id"];
-                this.columnOrder_Number = base.Columns["Order Number"];
-                this.columnOrder_Date = base.Columns["Order Date"];
-                this.columnPrice = base.Columns["Price"];
+                this.columnordNumber = base.Columns["ordNumber"];
+                this.columnprodName = base.Columns["prodName"];
+                this.columnorlPrice = base.Columns["orlPrice"];
+                this.columnordDate = base.Columns["ordDate"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid);
-                this.columnOrder_Number = new global::System.Data.DataColumn("Order Number", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnOrder_Number);
-                this.columnOrder_Date = new global::System.Data.DataColumn("Order Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnOrder_Date);
-                this.columnPrice = new global::System.Data.DataColumn("Price", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPrice);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid}, true));
-                this.columnid.AutoIncrement = true;
-                this.columnid.AutoIncrementSeed = -1;
-                this.columnid.AutoIncrementStep = -1;
-                this.columnid.AllowDBNull = false;
-                this.columnid.ReadOnly = true;
-                this.columnid.Unique = true;
-                this.columnOrder_Number.MaxLength = 20;
+                this.columnordNumber = new global::System.Data.DataColumn("ordNumber", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnordNumber);
+                this.columnprodName = new global::System.Data.DataColumn("prodName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprodName);
+                this.columnorlPrice = new global::System.Data.DataColumn("orlPrice", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnorlPrice);
+                this.columnordDate = new global::System.Data.DataColumn("ordDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnordDate);
+                this.columnordNumber.MaxLength = 20;
+                this.columnprodName.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1919,97 +1905,114 @@ namespace SalesDatasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int id {
-                get {
-                    return ((int)(this[this.tableorders.idColumn]));
-                }
-                set {
-                    this[this.tableorders.idColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Order_Number {
+            public string ordNumber {
                 get {
                     try {
-                        return ((string)(this[this.tableorders.Order_NumberColumn]));
+                        return ((string)(this[this.tableorders.ordNumberColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Order Number\' in table \'orders\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ordNumber\' in table \'orders\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableorders.Order_NumberColumn] = value;
+                    this[this.tableorders.ordNumberColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime Order_Date {
+            public string prodName {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableorders.Order_DateColumn]));
+                        return ((string)(this[this.tableorders.prodNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Order Date\' in table \'orders\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'prodName\' in table \'orders\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableorders.Order_DateColumn] = value;
+                    this[this.tableorders.prodNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal Price {
+            public decimal orlPrice {
                 get {
                     try {
-                        return ((decimal)(this[this.tableorders.PriceColumn]));
+                        return ((decimal)(this[this.tableorders.orlPriceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Price\' in table \'orders\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'orlPrice\' in table \'orders\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableorders.PriceColumn] = value;
+                    this[this.tableorders.orlPriceColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsOrder_NumberNull() {
-                return this.IsNull(this.tableorders.Order_NumberColumn);
+            public System.DateTime ordDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableorders.ordDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ordDate\' in table \'orders\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableorders.ordDateColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetOrder_NumberNull() {
-                this[this.tableorders.Order_NumberColumn] = global::System.Convert.DBNull;
+            public bool IsordNumberNull() {
+                return this.IsNull(this.tableorders.ordNumberColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsOrder_DateNull() {
-                return this.IsNull(this.tableorders.Order_DateColumn);
+            public void SetordNumberNull() {
+                this[this.tableorders.ordNumberColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetOrder_DateNull() {
-                this[this.tableorders.Order_DateColumn] = global::System.Convert.DBNull;
+            public bool IsprodNameNull() {
+                return this.IsNull(this.tableorders.prodNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsPriceNull() {
-                return this.IsNull(this.tableorders.PriceColumn);
+            public void SetprodNameNull() {
+                this[this.tableorders.prodNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetPriceNull() {
-                this[this.tableorders.PriceColumn] = global::System.Convert.DBNull;
+            public bool IsorlPriceNull() {
+                return this.IsNull(this.tableorders.orlPriceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetorlPriceNull() {
+                this[this.tableorders.orlPriceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsordDateNull() {
+                return this.IsNull(this.tableorders.ordDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetordDateNull() {
+                this[this.tableorders.ordDateColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2704,10 +2707,10 @@ WHERE        (customer.id = @Param1)";
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "orders";
-            tableMapping.ColumnMappings.Add("id", "id");
-            tableMapping.ColumnMappings.Add("Order Number", "Order Number");
-            tableMapping.ColumnMappings.Add("Order Date", "Order Date");
-            tableMapping.ColumnMappings.Add("Price", "Price");
+            tableMapping.ColumnMappings.Add("ordNumber", "ordNumber");
+            tableMapping.ColumnMappings.Add("prodName", "prodName");
+            tableMapping.ColumnMappings.Add("orlPrice", "orlPrice");
+            tableMapping.ColumnMappings.Add("ordDate", "ordDate");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -2724,11 +2727,12 @@ WHERE        (customer.id = @Param1)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        receipt.id, receipt.ordNumber AS [Order Number], receipt.ordDate AS [Order Date], order_line.orlPrice AS Price
+            this._commandCollection[0].CommandText = @"SELECT        receipt.ordNumber, product.prodName, order_line.orlPrice, receipt.ordDate
 FROM            receipt INNER JOIN
-                         order_line ON receipt.id = order_line.id INNER JOIN
-                         payment ON receipt.id = payment.id INNER JOIN
-                         customer ON receipt.id = customer.id
+                         order_line ON receipt.ordNumber = order_line.id INNER JOIN
+                         customer ON receipt.id = customer.id INNER JOIN
+                         inventory ON order_line.inventoryID = inventory.id INNER JOIN
+                         product ON inventory.productID = product.id
 WHERE        (customer.id = @Param1)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Param1", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));

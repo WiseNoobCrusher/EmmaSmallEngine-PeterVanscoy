@@ -6,7 +6,7 @@
     <head runat="server">
         <title>Emma's Small Engine - Sales</title>
         <link rel="stylesheet" href="~/css/styles.css" />
-        </head>
+    </head>
     <body class="Font">
         <form id="sales" runat="server">
             <div>
@@ -45,11 +45,26 @@
                 </asp:Table>
                 <br /><br /><br />
                 <asp:Label ID="lblOrders" Visible="False" runat="server"><h2>Order Information:</h2></asp:Label>
+                <asp:Label ID="lblOrdersNull" Visible="False" runat="server"></asp:Label>
                 <asp:Table ID="tblOrders" runat="server" CssClass="table table-bordered table-hover" EnableViewState="true" HorizontalAlign="Center" Visible="False" BorderWidth="1px" GridLines="Both">
                     <asp:TableRow ID="tblOrdersTableHeadings" runat="server" Visible="false">
                         <asp:TableCell runat="server" Font-Bold="True">Order Number</asp:TableCell>
-                        <asp:TableCell runat="server" Font-Bold="True">Order Date</asp:TableCell>
+                        <asp:TableCell runat="server" Font-Bold="True">Product Name</asp:TableCell>
                         <asp:TableCell runat="server" Font-Bold="True">Price</asp:TableCell>
+                        <asp:TableCell runat="server" Font-Bold="True">Order Date</asp:TableCell>
+                    </asp:TableRow>
+                </asp:Table>
+                <br /><br /><br />
+                <asp:Label ID="lblRepairs" Visible="False" runat="server"><h2>Repair Information:</h2></asp:Label>
+                <asp:Label ID="lblRepairsNull" Visible="False" runat="server"></asp:Label>
+                <asp:Table ID="tblRepairs" runat="server" CssClass="table table-bordered table-hover" EnableViewState="true" HorizontalAlign="Center" Visible="False" BorderWidth="1px" GridLines="Both">
+                    <asp:TableRow ID="tblRepairsTableHeadings" runat="server" Visible="false">
+                        <asp:TableCell runat="server" Font-Bold="True">Name of Service</asp:TableCell>
+                        <asp:TableCell runat="server" Font-Bold="True">Service Description</asp:TableCell>
+                        <asp:TableCell runat="server" Font-Bold="True">Price</asp:TableCell>
+                        <asp:TableCell runat="server" Font-Bold="True">Service Order In</asp:TableCell>
+                        <asp:TableCell runat="server" Font-Bold="True">Service Order Out</asp:TableCell>
+                        <asp:TableCell runat="server" Font-Bold="True">Service Order Issue</asp:TableCell>
                     </asp:TableRow>
                 </asp:Table>
                 <br />

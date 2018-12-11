@@ -21,8 +21,25 @@
                 <a class="NavItems" href="Admin.aspx"style="margin-right: 0px">Admin</a>
                 <br style="font-size: small"/><br style="font-size: small"/>
             </div>
-            <div>
-                <asp:Image ID="random" runat="server" />
+            <h1 style="text-align:center; font-size:25pt;">Welcome <asp:Label ID="lblWelcome" runat="server"></asp:Label>!!</h1>
+            <h2 style="text-align:center; font-size:20pt;">Quick Access:</h2>
+            <div class="ButtonBlock">
+                <div class="ButtonDiv">
+                    <asp:ImageButton class="ButtonCovers" runat="server" OnClick="btnSales_Click" ImageUrl="~/img/Sales.png" /><br />
+                    <asp:LinkButton OnClick="btnSales_Click" runat="server">Sales</asp:LinkButton>
+                </div>
+                <div class="ButtonDiv">
+                    <asp:ImageButton class="ButtonCovers" runat="server" OnClick="btnInventory_Click" ImageUrl="~/img/Inventory.png" /><br />
+                    <asp:LinkButton OnClick="btnInventory_Click" runat="server">Inventory</asp:LinkButton>
+                </div>
+                <div class="ButtonDiv">
+                    <asp:ImageButton class="ButtonCovers" runat="server" OnClick="btnOrdering_Click" ImageUrl="~/img/Ordering.png" /><br />
+                    <asp:LinkButton OnClick="btnOrdering_Click" runat="server">Ordering</asp:LinkButton>
+                </div>
+                <div class="ButtonDiv">
+                    <asp:ImageButton class="ButtonCovers" runat="server" OnClick="btnAdmin_Click" ImageUrl="~/img/Admin.png" /><br />
+                    <asp:LinkButton OnClick="btnAdmin_Click" runat="server">Admin</asp:LinkButton>
+                </div>
             </div>
         </form>
     </body>

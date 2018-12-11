@@ -76,6 +76,15 @@ namespace EmmaSmallEngine {
         protected global::System.Web.UI.WebControls.Label lblOrders;
         
         /// <summary>
+        /// lblOrdersNull control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblOrdersNull;
+        
+        /// <summary>
         /// tblOrders control.
         /// </summary>
         /// <remarks>
@@ -92,5 +101,41 @@ namespace EmmaSmallEngine {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TableRow tblOrdersTableHeadings;
+        
+        /// <summary>
+        /// lblRepairs control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblRepairs;
+        
+        /// <summary>
+        /// lblRepairsNull control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblRepairsNull;
+        
+        /// <summary>
+        /// tblRepairs control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table tblRepairs;
+        
+        /// <summary>
+        /// tblRepairsTableHeadings control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow tblRepairsTableHeadings;
     }
 }
