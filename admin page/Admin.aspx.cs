@@ -10,24 +10,30 @@ using System.Data;
 using SalesDatasets;
 using SalesDatasets.SalesDatasetTableAdapters;
 using System.Web.UI.WebControls;
+using SalesDatasets.ReceiptDataSetTableAdapters;
+using SalesDatasets.WeeklyReviewDataSetTableAdapters;
 
 namespace EmmaSmallEngine
 {
     public partial class Admin : System.Web.UI.Page
     {
         // Declare a reference to the dataset
-        private static SalesDataset dsSale;
+        private static ReceiptDataSet dsSale;
+        private static WeeklyReviewDataSet dsWeekly;
 
         // Declare a reference to the rows of search records
         private static DataRow[] receipts;
 
+
         static Admin()
         {
             // Initialize the dataset
-            dsSale = new SalesDataset();
+            dsSale = new ReceiptDataSet();
+            dsWeekly = new WeeklyReviewDataSet();
 
             // Initialize the table adapters
             receiptTableAdapter daSales = new receiptTableAdapter();
+            WeeklyReviewTableAdapter daWeekly = new WeeklyReviewTableAdapter();
 
             try
             {
@@ -44,19 +50,20 @@ namespace EmmaSmallEngine
 
         protected void ddlManagement_SelectedIndexChanged(object sender, EventArgs e)
         {
-          
+
         }
 
         protected void btnGenerate_Click(object sender, EventArgs e)
         {
-            
+
         }
+  
 
         protected void Button1_Click(object sender, EventArgs e)
         {
             double total = 0;
-            foreach (DataRow row in receipts)
-            {     
+            foreach (DataRow row in receipts) //WHYYYYYYYYYYYYYYYYYY
+            {
                 string date = yearDDL.SelectedIndex.ToString();
                 string purchaceDate = row.ItemArray[0].ToString();
 
@@ -66,6 +73,16 @@ namespace EmmaSmallEngine
                 }
             }
             TextBox1.Text = total.ToString();
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Calendar1_SelectionChanged(object sender, EventArgs e)
+        {
+        
         }
     }
 }

@@ -75,7 +75,115 @@
             </div>
             <br />
             <div class="GenerateButton">
-                <asp:Button ID="btnGenerate" type="Submit" Text="Generate" runat="server" OnClick="btnGenerate_Click" />
+                <asp:Label ID="Label3" runat="server" Text="Weekly Review"></asp:Label>
+                <br />
+                <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="Black" DayNameFormat="Shortest" Font-Names="Times New Roman" Font-Size="10pt" ForeColor="Black" Height="220px" NextPrevFormat="FullMonth" TitleFormat="Month" Width="400px" OnSelectionChanged="Calendar1_SelectionChanged">
+                    <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" ForeColor="#333333" Height="10pt" />
+                    <DayStyle Width="14%" />
+                    <NextPrevStyle Font-Size="8pt" ForeColor="White" />
+                    <OtherMonthDayStyle ForeColor="#999999" />
+                    <SelectedDayStyle BackColor="#CC3333" ForeColor="White" />
+                    <SelectorStyle BackColor="#CCCCCC" Font-Bold="True" Font-Names="Verdana" Font-Size="8pt" ForeColor="#333333" Width="1%" />
+                    <TitleStyle BackColor="Black" Font-Bold="True" Font-Size="13pt" ForeColor="White" Height="14pt" />
+                    <TodayDayStyle BackColor="#CCCC99" />
+                </asp:Calendar>
+                <br />
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="ObjectDataSource1" ForeColor="#333333" GridLines="None" AllowPaging="True">
+                    <AlternatingRowStyle BackColor="White" />
+                    <Columns>
+                        <asp:BoundField DataField="serordDateIn" HeaderText="serordDateIn" SortExpression="serordDateIn" />
+                        <asp:BoundField DataField="serordIssue" HeaderText="serordIssue" SortExpression="serordIssue" />
+                        <asp:BoundField DataField="invQuantity" HeaderText="invQuantity" SortExpression="invQuantity" />
+                        <asp:BoundField DataField="invSize" HeaderText="invSize" SortExpression="invSize" />
+                        <asp:BoundField DataField="invPrice" HeaderText="invPrice" SortExpression="invPrice" />
+                    </Columns>
+                    <EditRowStyle BackColor="#2461BF" />
+                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#EFF3FB" />
+                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                    <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                    <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                    <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                </asp:GridView>
+                <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataSourceID="ObjectDataSource2" ForeColor="#333333" GridLines="None">
+                    <AlternatingRowStyle BackColor="White" />
+                    <Columns>
+                        <asp:BoundField DataField="pordDateOrdered" HeaderText="pordDateOrdered" SortExpression="pordDateOrdered" />
+                        <asp:CheckBoxField DataField="pordPaid" HeaderText="pordPaid" SortExpression="pordPaid" />
+                        <asp:BoundField DataField="prodName" HeaderText="prodName" SortExpression="prodName" />
+                        <asp:BoundField DataField="prodDescription" HeaderText="prodDescription" SortExpression="prodDescription" />
+                        <asp:BoundField DataField="pordNumber" HeaderText="pordNumber" SortExpression="pordNumber" />
+                        <asp:BoundField DataField="prodBrand" HeaderText="prodBrand" SortExpression="prodBrand" />
+                    </Columns>
+                    <EditRowStyle BackColor="#2461BF" />
+                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#EFF3FB" />
+                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                    <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                    <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                    <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                </asp:GridView>
+                <br />
+                <asp:DropDownList ID="DropDownList1" runat="server" Height="19px" Width="160px" AutoPostBack="True" DataSourceID="ObjectDataSource4" DataTextField="manName" DataValueField="id">
+                    <asp:ListItem>Select Manufactorer </asp:ListItem>
+                </asp:DropDownList>
+                <br />
+                <br />
+                <asp:GridView ID="GridView3" runat="server" Width="440px" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="ObjectDataSource3">
+                    <Columns>
+                        <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
+                        <asp:BoundField DataField="manName" HeaderText="manName" SortExpression="manName" />
+                        <asp:CheckBoxField DataField="serordWarranty" HeaderText="serordWarranty" SortExpression="serordWarranty" />
+                        <asp:BoundField DataField="serName" HeaderText="serName" SortExpression="serName" />
+                        <asp:BoundField DataField="serDescription" HeaderText="serDescription" SortExpression="serDescription" />
+                        <asp:BoundField DataField="serPrice" HeaderText="serPrice" SortExpression="serPrice" />
+                    </Columns>
+                </asp:GridView>
+                <br />
+                <br />
+                <br />
+                <br />
+                <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="SalesDatasets.WeeklyReviewDataSetTableAdapters.WeeklyReviewTableAdapter">
+                    <SelectParameters>
+                        <asp:ControlParameter ControlID="Calendar1" Name="Param1" PropertyName="SelectedDate" Type="DateTime" />
+                    </SelectParameters>
+                </asp:ObjectDataSource>
+                <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="SalesDatasets.weeklyReview2DataSetTableAdapters.WeeklyReview2TableAdapter">
+                    <SelectParameters>
+                        <asp:ControlParameter ControlID="Calendar1" Name="Param1" PropertyName="SelectedDate" Type="DateTime" />
+                    </SelectParameters>
+                </asp:ObjectDataSource>
+                <br />
+                <br />
+                <asp:ObjectDataSource ID="ObjectDataSource3" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="SalesDatasets.WarrentyDataSetTableAdapters.WarrentyReportTableAdapter">
+                    <SelectParameters>
+                        <asp:ControlParameter ControlID="DropDownList1" Name="Param1" PropertyName="SelectedValue" Type="Int32" />
+                    </SelectParameters>
+                </asp:ObjectDataSource>
+                <asp:ObjectDataSource ID="ObjectDataSource4" runat="server" DeleteMethod="Delete" InsertMethod="Insert" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="SalesDatasets.ManufactorInfoDataSetTableAdapters.manufacturerTableAdapter" UpdateMethod="Update">
+                    <DeleteParameters>
+                        <asp:Parameter Name="Original_id" Type="Int32" />
+                        <asp:Parameter Name="Original_manName" Type="String" />
+                    </DeleteParameters>
+                    <InsertParameters>
+                        <asp:Parameter Name="manName" Type="String" />
+                    </InsertParameters>
+                    <UpdateParameters>
+                        <asp:Parameter Name="manName" Type="String" />
+                        <asp:Parameter Name="Original_id" Type="Int32" />
+                        <asp:Parameter Name="Original_manName" Type="String" />
+                    </UpdateParameters>
+                </asp:ObjectDataSource>
+                <br />
+                <br />
+                <br />
+                <br />
             </div>
             <br /><br />
             <div>
