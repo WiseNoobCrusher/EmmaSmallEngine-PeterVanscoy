@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Repairs.aspx.cs" Inherits="FinalAssignment.Repairs" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Repairs.aspx.cs" Inherits="EmmaSmallEngine.Repairs" %>
 
 <!DOCTYPE html>
 

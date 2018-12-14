@@ -17,24 +17,18 @@ namespace EmmaSmallEngine
     {
         private static SalesDataset dsSales = new SalesDataset();
 
-        static Sales()
-        {
-            customerTableAdapter daCustomer = new customerTableAdapter();
-            custCityTableAdapter daCity = new custCityTableAdapter();
-            try
-            {
-                daCustomer.Fill(dsSales.customer);
-                daCity.Fill(dsSales.custCity);
-            }
-            catch (Exception ex) { }
-        }
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!User.Identity.IsAuthenticated)
             {
                 Response.Redirect("~/Login.aspx");
             }
+
+            customerTableAdapter daCustomer = new customerTableAdapter();
+            custCityTableAdapter daCity = new custCityTableAdapter();
+
+            daCustomer.Fill(dsSales.customer);
+            daCity.Fill(dsSales.custCity);
 
             this.ddlManagement.Items[0].Attributes.Add("style", "color:#009900");
             this.ddlManagement.Items[0].Attributes.Add("disabled", "disabled");
@@ -101,9 +95,11 @@ namespace EmmaSmallEngine
             {
                 if (this.ddlCustomers.SelectedValue != "Pick a Customer...")
                 {
-                    daCustInfo.Fill(dsSales.custinfo, ddlCustomers.SelectedIndex);
-                    daOrders.Fill(dsSales.orders, ddlCustomers.SelectedIndex);
-                    daRepairs.Fill(dsSales.repairs, ddlCustomers.SelectedIndex);
+                    string[] custFirst = ddlCustomers.SelectedValue.Split(' ');
+
+                    daCustInfo.Fill(dsSales.custinfo, custFirst[0]);
+                    daOrders.Fill(dsSales.orders, custFirst[0]);
+                    daRepairs.Fill(dsSales.repairs, custFirst[0]);
 
                     this.tblCustInfoTableHeadings.Visible = this.tblCustInfo.Visible = this.lblCustInfo.Visible = true;
 
@@ -141,7 +137,7 @@ namespace EmmaSmallEngine
                         this.tblCustInfo.Rows.Add(tblRow);
                     }
 
-                    if (daOrders.GetData(this.ddlCustomers.SelectedIndex).Count() != 0)
+                    if (daOrders.GetData(custFirst[0]).Count() != 0)
                     {
                         this.tblOrdersTableHeadings.Visible = this.tblOrders.Visible = this.lblOrders.Visible = true;
 
@@ -173,7 +169,7 @@ namespace EmmaSmallEngine
                         this.lblOrdersNull.Text = "No Orders Found.";
                     }
 
-                    if (daRepairs.GetData(this.ddlCustomers.SelectedIndex).Count() != 0)
+                    if (daRepairs.GetData(custFirst[0]).Count() != 0)
                     {
                         this.tblRepairsTableHeadings.Visible = this.tblRepairs.Visible = this.lblRepairs.Visible = true;
 
@@ -214,7 +210,7 @@ namespace EmmaSmallEngine
                 }
                 refreshDDL();
             }
-            catch (Exception ex) { }
+            catch (Exception) { }
         }
 
         protected void custFilterSubmit_Click(object sender, EventArgs e)

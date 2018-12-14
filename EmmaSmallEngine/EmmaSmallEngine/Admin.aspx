@@ -21,7 +21,6 @@
                     <asp:ListItem>Customer</asp:ListItem>
                     <asp:ListItem>Orders</asp:ListItem>
                     <asp:ListItem>Deliveries</asp:ListItem>
-                    <asp:ListItem>Repairs</asp:ListItem>
                 </asp:DropDownList>
                 <a class="NavItems" href="Ordering.aspx">Ordering</a>
                 <a class="NavItems" href="Inventory.aspx">Inventory</a>
@@ -30,12 +29,48 @@
             </div>
             <div class="AdminButtonBlock">
                 <div class="AdminRadioButtons">
-                    <asp:RadioButton runat="server" id="rbWeekly" GroupName="Report" AutoPostBack="true" /><br />
-                    <asp:Label runat="server">Weekly Report</asp:Label>
                 </div>
+                <asp:Label ID="Label1" runat="server" style="text-align: right" Text="Staff Appreciation"></asp:Label>
+                <br />
+                <asp:Label ID="Label2" runat="server" Text="Select Year:"></asp:Label>
+                <asp:DropDownList ID="yearDDL" runat="server" Height="18px" Width="108px">
+                    <asp:ListItem>1990</asp:ListItem>
+                    <asp:ListItem>1991</asp:ListItem>
+                    <asp:ListItem>1992</asp:ListItem>
+                    <asp:ListItem>1993</asp:ListItem>
+                    <asp:ListItem>1994</asp:ListItem>
+                    <asp:ListItem>1995</asp:ListItem>
+                    <asp:ListItem>1996</asp:ListItem>
+                    <asp:ListItem>1997</asp:ListItem>
+                    <asp:ListItem>1998</asp:ListItem>
+                    <asp:ListItem>1999</asp:ListItem>
+                    <asp:ListItem>2000</asp:ListItem>
+                    <asp:ListItem>2001</asp:ListItem>
+                    <asp:ListItem>2002</asp:ListItem>
+                    <asp:ListItem>2003</asp:ListItem>
+                    <asp:ListItem>2004</asp:ListItem>
+                    <asp:ListItem>2005</asp:ListItem>
+                    <asp:ListItem>2006</asp:ListItem>
+                    <asp:ListItem>2007</asp:ListItem>
+                    <asp:ListItem>2008</asp:ListItem>
+                    <asp:ListItem>2009</asp:ListItem>
+                    <asp:ListItem>2010</asp:ListItem>
+                    <asp:ListItem>2011</asp:ListItem>
+                    <asp:ListItem>2012</asp:ListItem>
+                    <asp:ListItem>2013</asp:ListItem>
+                    <asp:ListItem>2014</asp:ListItem>
+                    <asp:ListItem>2015</asp:ListItem>
+                    <asp:ListItem>2016</asp:ListItem>
+                    <asp:ListItem>2017</asp:ListItem>
+                    <asp:ListItem>2018</asp:ListItem>
+                </asp:DropDownList>
+                <br />
+                <asp:TextBox ID="TextBox1" runat="server" Height="25px" ReadOnly="True" Width="152px">Party Portion Of Sales</asp:TextBox>
+                <br />
+                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Calculate" />
+                <br />
                 <div class="AdminRadioButtons">
-                    <asp:RadioButton runat="server" id="rbOrders" GroupName="Report" AutoPostBack="true" /><br />
-                    <asp:Label runat="server">Warranty Report</asp:Label>
+                    <br />
                 </div>
             </div>
             <br />

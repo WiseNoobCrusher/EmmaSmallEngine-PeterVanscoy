@@ -12,8 +12,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FinalAssignment</RootNamespace>
-    <AssemblyName>FinalAssignment</AssemblyName>
+    <RootNamespace>EmmaSmallEngine</RootNamespace>
+    <AssemblyName>EmmaSmallEngine</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -122,6 +122,9 @@
     </Content>
     <Content Include="Admin.aspx" />
     <Content Include="Customer.aspx" />
+    <Content Include="Customer_Delete.aspx" />
+    <Content Include="Customer_Edit.aspx" />
+    <Content Include="Customer_Insert.aspx" />
     <Content Include="Deliveries.aspx" />
     <Content Include="Inventory.aspx" />
     <Content Include="Ordering.aspx" />
@@ -147,6 +150,27 @@
     </Compile>
     <Compile Include="Customer.aspx.designer.cs">
       <DependentUpon>Customer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Delete.aspx.cs">
+      <DependentUpon>Customer_Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_Delete.aspx.designer.cs">
+      <DependentUpon>Customer_Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Edit.aspx.cs">
+      <DependentUpon>Customer_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_Edit.aspx.designer.cs">
+      <DependentUpon>Customer_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Insert.aspx.cs">
+      <DependentUpon>Customer_Insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_Insert.aspx.designer.cs">
+      <DependentUpon>Customer_Insert.aspx</DependentUpon>
     </Compile>
     <Compile Include="Deliveries.aspx.cs">
       <DependentUpon>Deliveries.aspx</DependentUpon>
@@ -175,6 +199,11 @@
     </Compile>
     <Compile Include="Orders.aspx.designer.cs">
       <DependentUpon>Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Repairs.aspx.cs">
       <DependentUpon>Repairs.aspx</DependentUpon>
@@ -217,6 +246,10 @@
   <ItemGroup>
     <None Include="packages.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

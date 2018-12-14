@@ -1,6 +1,3 @@
-E:\Emma's Small Engine\EmmaSmallEngine\EmmaSmallEngine\bin\FinalAssignment.dll.config
-E:\Emma's Small Engine\EmmaSmallEngine\EmmaSmallEngine\bin\FinalAssignment.dll
-E:\Emma's Small Engine\EmmaSmallEngine\EmmaSmallEngine\bin\FinalAssignment.pdb
 E:\Emma's Small Engine\EmmaSmallEngine\EmmaSmallEngine\bin\roslyn\csc.exe
 E:\Emma's Small Engine\EmmaSmallEngine\EmmaSmallEngine\bin\roslyn\csc.exe.config
 E:\Emma's Small Engine\EmmaSmallEngine\EmmaSmallEngine\bin\roslyn\csc.rsp
@@ -76,8 +73,6 @@ E:\Emma's Small Engine\EmmaSmallEngine\EmmaSmallEngine\bin\Microsoft.CodeDom.Pro
 E:\Emma's Small Engine\EmmaSmallEngine\EmmaSmallEngine\obj\Debug\EmmaSmallEngine.csprojAssemblyReference.cache
 E:\Emma's Small Engine\EmmaSmallEngine\EmmaSmallEngine\obj\Debug\EmmaSmallEngine.csproj.CoreCompileInputs.cache
 E:\Emma's Small Engine\EmmaSmallEngine\EmmaSmallEngine\obj\Debug\EmmaSmallEngine.csproj.CopyComplete
-E:\Emma's Small Engine\EmmaSmallEngine\EmmaSmallEngine\obj\Debug\FinalAssignment.dll
-E:\Emma's Small Engine\EmmaSmallEngine\EmmaSmallEngine\obj\Debug\FinalAssignment.pdb
 E:\Emma's Small Engine\EmmaSmallEngine\EmmaSmallEngine\bin\SalesDatasets.dll
 E:\Emma's Small Engine\EmmaSmallEngine\EmmaSmallEngine\bin\SalesDatasets.pdb
 E:\Emma's Small Engine\EmmaSmallEngine\EmmaSmallEngine\bin\SalesDatasets.dll.config
@@ -164,3 +159,8 @@ C:\Users\julie\Desktop\Emma's Small Engine\EmmaSmallEngine\EmmaSmallEngine\obj\D
 C:\Users\julie\Desktop\Emma's Small Engine\EmmaSmallEngine\EmmaSmallEngine\obj\Debug\EmmaSmallEngine.csproj.CopyComplete
 C:\Users\julie\Desktop\Emma's Small Engine\EmmaSmallEngine\EmmaSmallEngine\obj\Debug\FinalAssignment.dll
 C:\Users\julie\Desktop\Emma's Small Engine\EmmaSmallEngine\EmmaSmallEngine\obj\Debug\FinalAssignment.pdb
+E:\Emma's Small Engine\EmmaSmallEngine\EmmaSmallEngine\bin\EmmaSmallEngine.dll.config
+E:\Emma's Small Engine\EmmaSmallEngine\EmmaSmallEngine\bin\EmmaSmallEngine.dll
+E:\Emma's Small Engine\EmmaSmallEngine\EmmaSmallEngine\bin\EmmaSmallEngine.pdb
+E:\Emma's Small Engine\EmmaSmallEngine\EmmaSmallEngine\obj\Debug\EmmaSmallEngine.dll
+E:\Emma's Small Engine\EmmaSmallEngine\EmmaSmallEngine\obj\Debug\EmmaSmallEngine.pdb

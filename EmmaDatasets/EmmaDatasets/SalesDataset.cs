@@ -5,3 +5,7 @@
 namespace SalesDatasets
 {
 }
+
+namespace SalesDatasets
+{
+}
